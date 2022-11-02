@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            /* Global Styles */
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#FFFFFF;
+                --header-fg-color:#000000;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+
+            }
+
+            nav{
+                margin: auto;
+                
+                width: 1440px;
+                height: 80px;
+                display: flex;
+            }
+
+            .right{
+                width: 125px;
+                height: 41px;
+                
+                padding-left: 63px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+                font-size: 36px;
+                line-height: 41px;
+                font-family: 'Alice';
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .middle{
+                display: flex;
+
+                padding-left: 241px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Playfair Display';
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                padding-left: 175px;
+                padding-top: 29px;
+            }
+
+            .left span{
+                padding-bottom: 2px;
+                color: #5f5f5f;
+                border-bottom: 1px solid #D4D4D4;
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Playfair Display';
+                font-weight: 400;
+                text-align: left;
+
+                cursor: pointer;
+
+            }
+
+            .left img{
+                width: 13px;
+                height: 13px;
+                
+                padding-left: 133px;
+            }
+
+            /* Main styles */
+
+            main{
+                width: 100;
+            }
+
+            /* The first section of the main page */
+            .first-section{
+                width:1440px;
+                height: 690px;
+                margin: auto;
+
+            }
+            .first-section img{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 64px;
+
+                width:980px;
+                height: 666px;
+            }
+            .inner-container1{
+                width:303px;
+                height: 199px;
+
+                float: right;
+                padding-top: 244px;
+                padding-right: 70px;
+            }
+
+            .inner-container1 h1{
+                font-size: 32px;
+                line-height: 43px;
+                font-family: 'Playfair Display';
+                font-weight: 600; 
+                text-align: left;
+            }
+            .inner-container1 p:nth-of-type(1){
+                font-size: 14px;
+                line-height: 19px;
+                font-family: 'Playfair Display';
+                font-weight: 400; 
+                text-align: left;
+                color:#5a5959;
+            }
+
+            .inner-container1 p:nth-of-type(2){
+                font-size: 24px;
+                line-height: 32px;
+                font-family: 'Playfair Display';
+                font-weight: 400; 
+                text-align: left;
+
+                padding-top: 17px;
+            }
+
+            .inner-container1 a{
+                display: inline-block;
+
+                font-size: 16px;
+                line-height: 21px;
+                font-family: 'Playfair Display';
+                font-weight: 600;
+
+                margin-top: 36px;
+                padding:16px 32px;
+                text-decoration: none;
+
+                border: 2px solid #5A5959;
+                color:#000000;
+            }
+
+            /* The second section of the main page */
+            .second-section{
+                width: 1440px;
+                height: 688px;
+                margin: auto;
+            }
+
+            /* The third section of the main page */
+            .third-section{
+                width:1440px;
+                height: 118px;
+                margin: auto;
+            }
+
+            .third-section p{
+                display: inline-block;
+
+                width: 289px;
+                height: 37px;
+                padding-top: 35px;
+                padding-left: 555px;
+                padding-right: 13px;
+                text-align: left;
+
+                font-size: 28px;
+                line-height: 37px;
+                font-family: 'Playfair Display';
+                font-weight: 500;
+
+                cursor: pointer;
+            }
+            .third-section img{
+                width: 11.06px;
+                height: 21.22px;
+                
+                cursor: pointer;
+            }
+
+
+            /* The fourth section of the main page */
+            .fourth-section{
+                width:1440px;
+                height: 414px;
+                margin: auto;
+
+            }
+            
+            /* Footer styles */
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+                padding-bottom: 30px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:'Alice';
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                width: 105px;
+                height: 36px;
+
+                padding-left: 915px;
+                padding-top: 28px;
+                padding-right: 64px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="right">BeLight</div>
+                <div class="middle">
+                    <a href="#">About</a>
+                    <a href="#">Articles</a>
+                    <a href="#">Events</a>
+                    <a href="#">Find a Therapist</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="left">
+                    <span>Search<img src="search.svg"></span>
+                </div>
+            </nav>
+        </header>
+        <main main>
+            <div class="first-section">
+                <img src="argue.jpeg">
+                <section class="inner-container1">
+                    <h1>How to Argue Better</h1>
+                    <p>22 October 2022</p>
+                    <p>Are You a Good Listener?</p>
+                    <a href="#">Read Article</a>
+                </section>
+            </div>
+            <div class="second-section">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <div class="third-section">
+                <p>VIEW ALL ARTICLES</p>
+                <img src="arrow.svg">
+            </div>
+
+            <div class="fourth-section">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
