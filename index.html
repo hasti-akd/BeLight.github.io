@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BeLight Magazine</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
             /* Global Styles */
 
             *{
@@ -13,8 +14,14 @@
 			}
 
             :root{
-                --header-bg-color:#FFFFFF;
-                --header-fg-color:#000000;
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'Playfair Display', serif;
+                --body-date-fg: #5a5959;
             }
 
             /* Header styles */
@@ -22,34 +29,35 @@
             header{
                 width: 100%;
                 background-color: var(--header-bg-color);
-
             }
 
             nav{
-                margin: auto;
-                
                 width: 1440px;
                 height: 80px;
+
+                margin: auto;
                 display: flex;
             }
 
             .right{
-                width: 125px;
+
+                width:125px;
                 height: 41px;
-                
                 padding-left: 63px;
                 padding-top: 20px;
 
                 color: var(--header-fg-color);
+
                 font-size: 36px;
                 line-height: 41px;
-                font-family: 'Alice';
+                font-family: var(--header-family);
                 font-weight: 400;
                 text-align: left;
             }
 
             .middle{
-                display: flex;
+                width:601px;
+                height: 24px;
 
                 padding-left: 241px;
                 padding-top: 27px;
@@ -58,11 +66,10 @@
             .middle >a{
                 color:var(--header-fg-color);
 
+                font-family: var(--body-family);
                 font-size: 18px;
                 line-height: 24px;
-                font-family: 'Playfair Display';
                 font-weight: 400;
-                text-align: left;
                 text-decoration: none;
             }
 
@@ -71,43 +78,46 @@
             }
 
             .left{
-                padding-left: 175px;
+                width:205px;
+                height:25px;
+
                 padding-top: 29px;
+                padding-left: 141px;
             }
 
             .left span{
                 padding-bottom: 2px;
                 color: #5f5f5f;
                 border-bottom: 1px solid #D4D4D4;
+
+                font-family: var(--body-family);
                 font-size: 18px;
                 line-height: 24px;
-                font-family: 'Playfair Display';
                 font-weight: 400;
                 text-align: left;
 
                 cursor: pointer;
-
             }
 
             .left img{
-                width: 13px;
-                height: 13px;
+                width: 12px;
+                height: 12px;
                 
-                padding-left: 133px;
+                padding-left: 144px;
             }
 
             /* Main styles */
 
             main{
-                width: 100;
+                width: 100%;
             }
 
             /* The first section of the main page */
             .first-section{
                 width:1440px;
                 height: 690px;
-                margin: auto;
 
+                margin: auto;
             }
             .first-section img{
                 padding-top: 12px;
@@ -117,35 +127,37 @@
                 width:980px;
                 height: 666px;
             }
-            .inner-container1{
+            .first-section .inner-container1{
                 width:303px;
                 height: 199px;
 
                 float: right;
                 padding-top: 244px;
                 padding-right: 70px;
+                color: var(--body-fg);
             }
 
             .inner-container1 h1{
                 font-size: 32px;
                 line-height: 43px;
-                font-family: 'Playfair Display';
+                font-family: var(--body-family);
                 font-weight: 600; 
                 text-align: left;
             }
+
             .inner-container1 p:nth-of-type(1){
                 font-size: 14px;
                 line-height: 19px;
-                font-family: 'Playfair Display';
+                font-family: var(--body-family);
                 font-weight: 400; 
                 text-align: left;
-                color:#5a5959;
+                color: var(--body-date-fg);
             }
 
             .inner-container1 p:nth-of-type(2){
                 font-size: 24px;
                 line-height: 32px;
-                font-family: 'Playfair Display';
+                font-family: var(--body-family);
                 font-weight: 400; 
                 text-align: left;
 
@@ -157,64 +169,228 @@
 
                 font-size: 16px;
                 line-height: 21px;
-                font-family: 'Playfair Display';
+                font-family: var(--body-family);
                 font-weight: 600;
 
                 margin-top: 36px;
                 padding:16px 32px;
                 text-decoration: none;
 
-                border: 2px solid #5A5959;
-                color:#000000;
+                border: 2px solid var(--body-date-fg);
+                color: var(--body-fg);
             }
 
             /* The second section of the main page */
             .second-section{
                 width: 1440px;
-                height: 688px;
-                margin: auto;
+                height: 687px;
+                margin: auto;   
+
+                display: flex;
+            }
+
+            .second-section .first-part {
+                width: 649px;
+                height: 666px;
+
+                padding-top: 10px;
+                padding-left: 64px;
+            
+                background-image:  url("kind.jpg");  
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+            }
+
+            .first-part .inner-container1{
+                padding-top: 423px;
+                padding-left: 301px;
+                color: var(--body-fg);
+            }
+
+            .second-section .second-part{
+                width: 648px;
+                height: 666px;
+
+                padding-top: 10px;
+                padding-left: 16px;
+
+                background-image:  url("fawn.jpeg");  
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+            }
+
+            .second-part .inner-container1{
+                padding-top: 50px;
+                padding-left: 20px;
+                color: var(--body-fg);
+            }
+
+            .second-section h2{
+                font-size: 30px;
+                line-height: 40px;
+                font-family: var(--body-family);
+                font-weight: 600; 
+                text-align: left;
+            }
+
+            .second-section p:nth-of-type(2){
+                font-size: 22px;
+                line-height: 29px;
             }
 
             /* The third section of the main page */
-            .third-section{
-                width:1440px;
+            .third-section {
+                width: 1440px;
                 height: 118px;
                 margin: auto;
             }
 
             .third-section p{
                 display: inline-block;
+                position: relative;
 
-                width: 289px;
-                height: 37px;
                 padding-top: 35px;
                 padding-left: 555px;
-                padding-right: 13px;
                 text-align: left;
 
                 font-size: 28px;
                 line-height: 37px;
-                font-family: 'Playfair Display';
+                font-family: var(--body-family);
                 font-weight: 500;
 
                 cursor: pointer;
             }
+
+            .third-section p::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                left: 558px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .third-section p:hover::after {
+                width: 312px;
+            }
+
             .third-section img{
-                width: 11.06px;
-                height: 21.22px;
-                
+                width: 11px;
+                height: 21px;
+
+                padding-left: 32px;
+            }
+
+            /* The fourth section of the main page */
+
+            .fourth-section{
+                width: 1312px;
+                height: 414px;
+
+                position: relative;
+                margin: auto;
+            }
+
+            .fourth-section h3{
+                padding-top: 16px;
+                padding-left: 20px;
+
+                font-size: 28px;
+                line-height: 37px;
+                font-family: var(--body-family);
+                font-weight: 500; 
+                text-align: left;
+                color: var(--body-fg);
+            }
+
+            .fourth-section p{
+                padding-top: 35px;
+                padding-left: 20px;
+
+                width: 540px;
+
+                font-size: 24px;
+                line-height: 36px;
+                font-family: var(--body-family);
+                font-weight: 400; 
+                text-align: left;
+                color: var(--body-fg);
+            }
+
+            .fourth-section .first-part{
+                position: absolute;
+
+                width: 649px;
+                height: 414px;
+                background-color: #F4F2F2;;
+            }
+
+            .first-part input{
+                width: 310px;
+                height: 64px;
+
+                margin-left: 62px;
+                margin-top: 45px;
+                margin-right: 20px;
+                padding-left: 10px;
+
+                border-radius: 0%;
+                background-color: #F4F2F2;
+                border-color: var(--body-date-fg);
+
+                font-family:  var(--body-family);
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 400; 
+                text-align: left;
+            }
+
+            .first-part button{
+                width: 167px;
+                height: 66px;
+
+                margin-top: 46px;
+                margin-right: 61px;
+
+                border-radius: 0%;
+                background-color: #F4F2F2;
+                border-color: var(--body-date-fg);
+
+                font-family:  var(--body-family);
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 600; 
+                text-align: center;
                 cursor: pointer;
             }
 
-
-            /* The fourth section of the main page */
-            .fourth-section{
-                width:1440px;
+            .fourth-section .second-part{
+                position: absolute;
+                left: 664px;
+                width:649px;
                 height: 414px;
-                margin: auto;
 
+                background-color: #F4F2F2;
             }
-            
+
+            .fourth-section .second-part a{
+                display: inline-block;
+                font-size: 16px;
+                line-height: 21px;
+                font-family: var(--body-family);
+                font-weight: 400;
+
+                padding-left: 20px;
+                padding-top: 27px;
+
+                color: var(--body-date-fg);
+                text-decoration: underline;
+                cursor: pointer;
+            }
+                      
             /* Footer styles */
             footer{
                 margin:auto;
@@ -230,21 +406,17 @@
 
                 padding-top: 31px;
                 padding-left: 64px;
-                padding-bottom: 30px;
 
                 font-size: 16px;
                 line-height: 18px;
-                font-family:'Alice';
+                font-family:var(--header-family);
                 font-weight: 400;
             }
 
             .inner-container-footer {
-                width: 105px;
-                height: 36px;
-
-                padding-left: 915px;
-                padding-top: 28px;
+                padding-left: 915px;;
                 padding-right: 64px;
+                padding-top: 28px;
             }
 
             .inner-container-footer img:nth-child(1){
@@ -282,7 +454,8 @@
                 </div>
             </nav>
         </header>
-        <main main>
+        <main>
+
             <div class="first-section">
                 <img src="argue.jpeg">
                 <section class="inner-container1">
@@ -292,27 +465,42 @@
                     <a href="#">Read Article</a>
                 </section>
             </div>
+
             <div class="second-section">
-                <div>
-
+                <div class="first-part">
+                    <section class="inner-container1">
+                        <h2>Goodness Takes Reason</h2>
+                        <p>19 October 2022</p>
+                        <p>Are Kind People Intelligent?</p>
+                        <a href="#">Read Article</a>
+                    </section>
                 </div>
-                <div>
-
+                <div class="second-part">
+                    <section class="inner-container1">
+                        <h2>The Fawn Response</h2>
+                        <p>16 October 2022</p>
+                        <p>How Trauma Can Lead to People-Pleasing</p>
+                        <a href="#">Read Article</a>
+                    </section>
                 </div>
             </div>
 
             <div class="third-section">
-                <p>VIEW ALL ARTICLES</p>
-                <img src="arrow.svg">
+                <p>VIEW ALL ARTICLES<img src="arrow.svg"></p>              
             </div>
 
             <div class="fourth-section">
-                <div>
-
-                </div>
-                <div>
-
-                </div>
+                <section class="first-part">
+                    <h3>Get our wellness newsletter</h3>
+                    <p>Filter out the noise and nurture your inbox with health and wellness advice that’s inclusive and rooted in medical expertise.</p>
+                    <input type="email" placeholder="Enter your email here">
+                    <button type="button">Subscribe</button> 
+                </section>
+                <section class="second-part">
+                    <h3>About</h3>
+                    <P>We’re on a mission to create a healthier, happier, more sustainable society.<br>Our aim is to provide informative, inspiring and topical stories about mental health and wellbeing.</P>
+                    <a>Read More</a>
+                </section>
             </div>
 
         </main>
