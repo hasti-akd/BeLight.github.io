@@ -6,6 +6,7 @@
         <title>BeLight Magazine</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
             /* Global Styles */
 
             *{
@@ -17,10 +18,11 @@
                 --header-bg-color:#fff;
                 --header-fg-color: #202124;
                 --header-family: 'Alice', serif;
+                --header-nav-family:'Playfair Display', serif;
 
                 --body-bg: #fff;
                 --body-fg: #202124;
-                --body-family: 'Playfair Display', serif;
+                --body-family: 'PT Serif', serif;
                 --body-date-fg: #5a5959;
             }
 
@@ -66,11 +68,60 @@
             .middle >a{
                 color:var(--header-fg-color);
 
-                font-family: var(--body-family);
+                font-family: var(--header-nav-family);
                 font-size: 18px;
                 line-height: 24px;
                 font-weight: 400;
                 text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                left: 476px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 47px;
+            }
+
+            .middle a:nth-of-type(2)::after{
+                left: 585px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 59px;
+            }
+
+            .middle a:nth-of-type(3)::after{
+                left: 706px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 51px;
+            }
+
+            .middle a:nth-of-type(4)::after{
+                left: 819px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 120px;
+            }
+
+            .middle a:nth-of-type(5)::after{
+                left: 1002px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 58px;
             }
 
             .middle a+a{
@@ -85,25 +136,31 @@
                 padding-left: 141px;
             }
 
-            .left span{
-                padding-bottom: 2px;
-                color: #5f5f5f;
-                border-bottom: 1px solid #D4D4D4;
+            .left input{
+                width: 205px;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid #D4D4D4;
 
-                font-family: var(--body-family);
+                font-family: var(--header-nav-family);
                 font-size: 18px;
                 line-height: 24px;
                 font-weight: 400;
                 text-align: left;
-
-                cursor: pointer;
             }
 
             .left img{
                 width: 12px;
                 height: 12px;
-                
-                padding-left: 144px;
+            }
+
+            .left button{
+                margin-left: -16px;
+
+                color: var(--body-bg);
+                background-color: var(--body-bg);
+                border:none;
+                cursor: pointer;
             }
 
             /* Main styles */
@@ -113,6 +170,7 @@
             }
 
             /* The first section of the main page */
+
             .first-section{
                 width:1440px;
                 height: 690px;
@@ -128,12 +186,14 @@
                 height: 666px;
             }
             .first-section .inner-container1{
-                width:303px;
+                width:313px;
                 height: 199px;
 
                 float: right;
                 padding-top: 244px;
-                padding-right: 70px;
+                padding-right: 64px;
+                margin-left: 10px;
+            
                 color: var(--body-fg);
             }
 
@@ -180,7 +240,13 @@
                 color: var(--body-fg);
             }
 
+            .inner-container1 a:hover{
+                color: var(--body-bg);
+                background-color: var(--body-date-fg);
+            }
+
             /* The second section of the main page */
+
             .second-section{
                 width: 1440px;
                 height: 687px;
@@ -207,6 +273,11 @@
                 color: var(--body-fg);
             }
 
+            .second-section .first-part a:hover{
+                color: #E7D8C3;
+                background-color: var(--body-date-fg);
+            }
+
             .second-section .second-part{
                 width: 648px;
                 height: 666px;
@@ -221,7 +292,7 @@
 
             .second-part .inner-container1{
                 padding-top: 50px;
-                padding-left: 20px;
+                padding-left: 18px;
                 color: var(--body-fg);
             }
 
@@ -238,7 +309,13 @@
                 line-height: 29px;
             }
 
+            .second-section .second-part a:hover{
+                color: #BBB59D;
+                background-color: var(--body-date-fg);
+            }
+
             /* The third section of the main page */
+
             .third-section {
                 width: 1440px;
                 height: 118px;
@@ -259,22 +336,6 @@
                 font-weight: 500;
 
                 cursor: pointer;
-            }
-
-            .third-section p::after {
-                content:'';
-                position: absolute;
-                display: block;
-                bottom: -1px;
-                left: 558px;
-                width: 0;
-                height: 1px;
-                transition: width 200ms ease;
-                background-color: var(--body-fg);
-            }
-
-            .third-section p:hover::after {
-                width: 312px;
             }
 
             .third-section img{
@@ -298,7 +359,7 @@
                 padding-top: 16px;
                 padding-left: 20px;
 
-                font-size: 28px;
+                font-size: 26px;
                 line-height: 37px;
                 font-family: var(--body-family);
                 font-weight: 500; 
@@ -312,7 +373,7 @@
 
                 width: 540px;
 
-                font-size: 24px;
+                font-size: 22px;
                 line-height: 36px;
                 font-family: var(--body-family);
                 font-weight: 400; 
@@ -325,7 +386,7 @@
 
                 width: 649px;
                 height: 414px;
-                background-color: #F4F2F2;;
+                background-color: #F5F5F3;
             }
 
             .first-part input{
@@ -338,14 +399,15 @@
                 padding-left: 10px;
 
                 border-radius: 0%;
-                background-color: #F4F2F2;
-                border-color: var(--body-date-fg);
+                background-color: #F5F5F3;
+                border: 2px solid var(--body-date-fg);
 
                 font-family:  var(--body-family);
                 font-size: 16px;
                 line-height: 21px;
                 font-weight: 400; 
                 text-align: left;
+                outline: none;
             }
 
             .first-part button{
@@ -356,8 +418,8 @@
                 margin-right: 61px;
 
                 border-radius: 0%;
-                background-color: #F4F2F2;
-                border-color: var(--body-date-fg);
+                background-color: #F5F5F3;
+                border: 2px solid var(--body-date-fg);
 
                 font-family:  var(--body-family);
                 font-size: 16px;
@@ -367,13 +429,18 @@
                 cursor: pointer;
             }
 
+            .first-part button:hover{
+                color:#F5F5F3;
+                background-color: var(--body-date-fg);
+            }
+
             .fourth-section .second-part{
                 position: absolute;
                 left: 664px;
                 width:649px;
                 height: 414px;
 
-                background-color: #F4F2F2;
+                background-color: #F5F5F3;
             }
 
             .fourth-section .second-part a{
@@ -392,6 +459,7 @@
             }
                       
             /* Footer styles */
+            
             footer{
                 margin:auto;
                 display: flex;
@@ -422,15 +490,18 @@
             .inner-container-footer img:nth-child(1){
                 width: 25px;
                 height: 25px;
+                cursor: pointer;
             }
             .inner-container-footer img:nth-child(2){
                 width: 25px;
                 height: 25px;
+                cursor: pointer;
             }
 
             .inner-container-footer img:nth-child(3){
                 width: 22px;
                 height: 22px;
+                cursor: pointer;
             }
 
             .inner-container-footer :not(:first-child){
@@ -443,14 +514,15 @@
             <nav>
                 <div class="right">BeLight</div>
                 <div class="middle">
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                     <a href="#">Articles</a>
                     <a href="#">Events</a>
                     <a href="#">Find a Therapist</a>
                     <a href="#">Contact</a>
                 </div>
                 <div class="left">
-                    <span>Search<img src="search.svg"></span>
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
                 </div>
             </nav>
         </header>
@@ -499,7 +571,7 @@
                 <section class="second-part">
                     <h3>About</h3>
                     <P>We’re on a mission to create a healthier, happier, more sustainable society.<br>Our aim is to provide informative, inspiring and topical stories about mental health and wellbeing.</P>
-                    <a>Read More</a>
+                    <a href="about.html">Read More</a>
                 </section>
             </div>
 

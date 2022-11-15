@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+            /* Global Styles */
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'Playfair Display', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif', serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1440px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width:125px;
+                height: 41px;
+                padding-left: 63px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                width:601px;
+                height: 24px;
+
+                padding-left: 241px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                left: 476px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 47px;
+            }
+
+            .middle a:nth-of-type(2)::after{
+                left: 585px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 59px;
+            }
+
+            .middle a:nth-of-type(3)::after{
+                left: 706px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 51px;
+            }
+
+            .middle a:nth-of-type(4)::after{
+                left: 819px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 120px;
+            }
+
+            .middle a:nth-of-type(5)::after{
+                left: 1002px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 58px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                width:205px;
+                height:25px;
+
+                padding-top: 29px;
+                padding-left: 141px;
+            }
+
+            .left input{
+                width: 205px;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid #D4D4D4;
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+            }
+
+            .left button{
+                margin-left: -16px;
+
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+            }
+
+            /* Main styles */
+
+            main{
+                width: 100;
+            }
+
+            /* The main section of the about page */
+
+            .main-part{
+                position: relative;
+                width:1440px;
+                height: 864px;
+                margin: auto;
+            }
+
+            .main-part img{
+                padding-top: 167px;
+                padding-left: 64px;
+            }
+
+            .main-part .about{
+                position: absolute;
+                width: 1098px;
+                height: 864px;
+                left:278px;
+                top:0px;
+                z-index: -1;
+
+                background-color: #F8EEEC;
+                color: var(--body-fg);
+            }
+
+            .main-part .inner-container1{
+                width: 869px;
+                height: 721px;
+
+                padding-top: 82px;
+                padding-left: 229px;
+
+                line-height: 40px;
+                font-family:var(--body-family);
+                font-weight: 400;
+            }
+
+            .main-part .inner-container1 p:nth-child(odd){
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .main-part .inner-container1 p:nth-child(even){
+                font-size: 20px;
+            }
+
+            .main-part .inner-container1 p:nth-child(odd):not(:first-child){
+                padding-top: 40px;
+            }
+                   
+            /* Footer styles */
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="#">About</a>
+                    <a href="#">Articles</a>
+                    <a href="#">Events</a>
+                    <a href="#">Find a Therapist</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main-part">
+                <img src="about.jpeg">
+                <div class="about">
+                    <div class="inner-container1">
+                        <p>Hi there, and welcome to BeLight!</p>
+                        <p>Here at BeLight, our mission is to create a healthier, happier and more sustainable society and to challenge the stigma around mental health.</p>
+                        <p>Background</p>
+                        <p>The initial idea that led to the creation of BeLight originated from people who were working on a class project and were interested in and concerned about mental health and wellbeing. 
+                        <br>They all believed in the importance of promoting mental health and created this website, which is growing daily.</p>
+                        <p>Our Mission</p>
+                        <p>It is important to us to provide informative, inspiring, and topical stories about mental health and wellbeing. We strongly believe that raising awareness of mental health conditions is the most powerful method of counteracting the shame many people struggling with these issues may feel.</p>
+                        <p>Want to find out more?</p>
+                        <p>If you have any enquiries and would like to get in touch with us, please drop us an email at <a style="text-decoration: underline; text-underline-offset: 8px;">hello@belight.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
