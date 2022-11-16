@@ -33,7 +33,7 @@
             }
 
             nav{
-                width: 1440px;
+                width: 1312px;
                 height: 80px;
 
                 margin: auto;
@@ -42,9 +42,8 @@
 
             .right{
 
-                width:125px;
+                width: 125px;
                 height: 41px;
-                padding-left: 63px;
                 padding-top: 20px;
 
                 color: var(--header-fg-color);
@@ -58,10 +57,11 @@
             }
 
             .middle{
-                width:601px;
+                display: flex;
+                width: 600px;
                 height: 24px;
 
-                padding-left: 241px;
+                padding-left: 220px;
                 padding-top: 27px;
             }
 
@@ -81,7 +81,6 @@
                 display: block;
                 bottom: -1px;
                 top: 53px;
-                left: 476px;
                 width: 0;
                 height: 1px;
                 transition: width 200ms ease;
@@ -89,39 +88,23 @@
             }
 
             .middle a:hover::after {
-                width: 47px;
-            }
-
-            .middle a:nth-of-type(2)::after{
-                left: 585px;
+                width: 46px;
             }
 
             .middle a:nth-of-type(2):hover::after {
-                width: 59px;
-            }
-
-            .middle a:nth-of-type(3)::after{
-                left: 706px;
+                width: 58px;
             }
 
             .middle a:nth-of-type(3):hover::after {
-                width: 51px;
-            }
-
-            .middle a:nth-of-type(4)::after{
-                left: 819px;
+                width: 50px;
             }
 
             .middle a:nth-of-type(4):hover::after {
                 width: 120px;
             }
 
-            .middle a:nth-of-type(5)::after{
-                left: 1002px;
-            }
-
             .middle a:nth-of-type(5):hover::after {
-                width: 58px;
+                width: 59px;
             }
 
             .middle a+a{
@@ -129,18 +112,20 @@
             }
 
             .left{
-                width:205px;
-                height:25px;
+                display: flex;
+                width:204px;
+                height:24px;
 
-                padding-top: 29px;
-                padding-left: 141px;
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
             }
 
             .left input{
-                width: 205px;
+                width:192px;
                 border: none;
                 outline: none;
-                border-bottom: 2px solid #D4D4D4;
+                
 
                 font-family: var(--header-nav-family);
                 font-size: 18px;
@@ -152,11 +137,10 @@
             .left img{
                 width: 12px;
                 height: 12px;
+                margin-top: 6px;
             }
 
             .left button{
-                margin-left: -16px;
-
                 color: #fff;
                 background-color: #fff;
                 border:none;
