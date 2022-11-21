@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+            /* Global Styles */
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'PT Serif', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif',Serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1312px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width: 125px;
+                height: 41px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                display: flex;
+                width: 600px;
+                height: 24px;
+
+                padding-left: 220px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 50px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 62px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 54px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 131px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 63px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                display: flex;
+                width:204px;
+                height:24px;
+
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
+            }
+
+            .left input{
+                width:192px;
+                border: none;
+                outline: none;
+                
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+                margin-top: 6px;
+            }
+
+            .left button{
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+            }
+            
+            /* Main styles */
+
+            main{
+                width: 100%;
+            }
+
+            /* The first section of the article page */
+
+            .first-section{
+                width: 1312px;
+                height:207px;
+                margin: auto;
+
+                background-color: #F5F5F3;
+                font-family: var(--body-family);
+                color: var(--body-fg);
+            }
+
+            .first-section h2{
+                padding-top: 25px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(1){
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(2){
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 40px;
+                text-align: center;
+                color: #5A5959;
+            }
+
+            /* The second section of the article page */
+
+            .second-section{
+                width:1312px;
+                height:1822px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+                font-family: var(--body-family);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 34px;  
+            }
+
+            .second-section p{
+                margin-left: 111px;
+                margin-right: 111px;
+                margin-top: 17px;
+            }
+          
+            /* The third section of the article page */
+
+            .third-section{
+                position: relative;
+                width:1312px;
+                height: 74px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+            }
+
+            .third-section p{
+                position: absolute;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 34px;
+
+                top: 20px;
+                left: 111px;
+            }
+
+            .third-section p a{
+                font-style: italic;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-thickness: 1px;
+                cursor: pointer;
+            }
+
+            .third-section p+a{
+                float: right;
+                color:#5A5959;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-top: 28px;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                cursor: pointer;
+            }
+
+            /* The fourth section of the article page */
+
+            .fourth-section{
+                display: flex;
+                width:1312px;
+                height:207px;
+                margin: auto;
+
+                background-color:#F5F5F3;
+                color: var(--body-fg);
+            }
+
+            .fourth-section img{
+                padding-left: 111px;
+                padding-top: 17px;
+            }
+
+            .fourth-section p{
+                padding-left: 2px;
+                padding-top: 74px;
+
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 60px;
+                font-style: italic;
+                color: var(--body-family);
+            }
+
+            /* Footer styles */
+
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="section-1">
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="about.html">About</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="events.html">Events</a>
+                    <a href="find a therapist.html">Find a Therapist</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="first-section">
+                <h2>How to Argue Better</h2>
+                <p>Are You a Good Listener?</p>
+                <p>22 October 2022</p>
+            </section>
+            <div class="second-section">
+                <p>A few years ago, I had an argument with a close friend who had decided not to give his children any vaccinations. To preserve our relationship, I vowed never to talk about vaccines with him again. When COVID-19 arrived, I broke that vow. For the next nine months, we duked it out in email threads so long that we ran out of new colours for our replies. One day, he made a comment that caught me off guard. We’d argued more in the past year than we’d spoken in the preceding decade. "I don’t know about you," he wrote, "but I love it."
+                </p>
+                <p>He wasn’t alone. I found myself looking forward to our cognitive cage fights. Instead of pushing us apart, arguing brought us closer together. And rather than closing our minds, we both opened up. We admitted we were wrong on some points—and discovered harmony on others.
+                    <br>In our polarised world, a productive disagreement is a rare occurrence. Research shows that the average person would rather talk to a stranger who shares their political views than a friend who doesn’t. That’s a travesty.
+                </p>
+                <p>As an organisational psychologist and recovering conflict avoider, I've spent years studying how to build our argument literacy. Arguing well is a skill set, but it’s heavily influenced by your mindset. A good debate isn’t about one person declaring victory; it’s about both people making a discovery.
+                </p>
+                <p style="font-size: 20px; font-weight: 700;">Are you a preacher, prosecutor, or politician?</p>
+                <p>In disagreements, too many of us think like preachers, prosecutors, and politicians. In preacher mode, you’re trying to proselytise your views. In prosecutor mode, you're attacking someone else’s. And in politician mode, you don’t even listen to people unless they already share your views.
+                </p>
+                <p>When I hear someone talk like a preacher or politician, I often snap into prosecutor mode. There are few things that offend me more than ignorance masquerading as knowledge. If I think you’re wrong, I feel it’s my professional responsibility as a social scientist – and my moral responsibility as a human being – to correct you. I’ve been called a logic bully. It took me too long to realise that hammering people with facts rarely wins the argument and sometimes loses the relationship.
+                    <br>Whether you’re preaching, prosecuting, or politicking, you’ve already concluded that you're right and they are wrong. You've flipped a switch that shuts down your capacity for critical thinking.
+                </p>
+                <p>The more charged the issue, the harder it is to stay in control of your critical thinking skills. We choose the most convenient arguments to preach our convictions but demand bulletproof facts before we rethink them. It’s not just due to confirmation bias — the tendency to seize ideas that validate our views while dismissing information that challenges them.
+                    <br>It’s also because of distance. We’re often too close to our own arguments to evaluate them critically. To recognise our blind spots, we need other people to hold up a mirror. Friction isn’t inherently bad; it can be productive. If two people always agree, at least one of them is failing to think critically or speak candidly. A difference of opinion doesn’t have to threaten a relationship; it can be an opportunity to learn. The people who teach you the most are the ones who question your thought process, not the ones who validate your conclusions.
+                </p>
+                <p style="font-size: 20px; font-weight: 700;">Embrace the shades of grey</p>
+                <p>My friend who was opposed to vaccines works in healthcare. I asked him if he could help me identify flaws in my reasoning about the benefits of them. He quickly pointed out that when I said, "Vaccines are safe and effective," I was parroting a narrative. How safe? How effective? He was right. I had fallen victim to what psychologists call "binary bias." It's when we take a complex spectrum and oversimplify it into two categories. If we want to have better arguments, we need to look for the shades of grey.
+                </p>
+                <p style="font-size: 20px; font-weight: 700;">Agree on your approach to arguing</p>
+                <p>
+                In conflict-mediation training, I learned that if you want to have a good argument, it helps to take a step back and talk about how you argue. I told my friend that before debating the facts, we should discuss how to assess them.
+                <br>My friend had helped me see the selective laziness of my reasoning. Now I had an opportunity to help him spot a hole in his. I asked if he believed the Earth is round. He said yes. 
+                </p>
+                <p>
+                He might insist on seeing it with his own eyes. I followed up with another question. Even if he could see a round Earth from space, who’s to say it isn’t an optical illusion? The Earth is spinning, but your eyes (and inner ears) tell you it’s standing still. I acknowledged that he has some valid concerns about vaccines and that I share some of them. But I worry that, on this issue, he’s more in the Flat Earther camp than the science camp. For the first time in our 30-year friendship, he said, "I see what you’re saying."
+                <br>People who are sceptical of scientific evidence on one issue rarely deny it across the board. Climate change deniers put their faith in physics each time they board a plane. Vaccine sceptics show their trust in medicine whenever they take an antibiotic.
+                <br>The highest compliment from someone who disagrees with you is not, "You were right." It's "You made me think." A good argument helps us recognise complexity where we once saw simplicity. The ultimate purpose of debate is not to produce consensus. It's to promote critical thinking.
+                </p>
+            </div>
+            <div class="third-section">
+                <p>Reference: <a>https://www.theguardian.com/lifeandstyle/2022/jul/30/you-cant-say-that-how-to-argue-better</a></p>
+                <a href="#section-1">Back To Top</a>
+            </div>
+            <div class="fourth-section">
+                <img src="article1.jpg" width="244" height="174.26">
+                <p>“A good debate isn’t about one person declaring victory; it’s about both people making a discovery.”</p>
+            </div>
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+            /* Global Styles */
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'PT Serif', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif', serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1312px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width: 125px;
+                height: 41px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                display: flex;
+                width: 600px;
+                height: 24px;
+
+                padding-left: 220px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 50px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 62px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 54px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 131px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 63px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                display: flex;
+                width:204px;
+                height:24px;
+
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
+            }
+
+            .left input{
+                width:192px;
+                border: none;
+                outline: none;
+                
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+                margin-top: 6px;
+            }
+
+            .left button{
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+            }
+
+            /* Main styles */
+
+            main{
+                width: 100%;
+            }
+
+            /* The first section of the article page */
+
+            .first-section{
+                width: 1312px;
+                height:207px;
+                margin: auto;
+
+                background-color: #F5F5F3;
+            }
+
+            .first-section p:nth-child(1){
+                padding-top: 78px;
+                font-family: var(--body-family);
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 50px;
+                text-align: center;
+
+                color: var(--body-fg);
+                font-style: italic;
+            }
+
+            .first-section p:nth-child(2){
+                padding-top: 40px;
+                font-family: var(--body-family);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                text-align: center;
+
+                color: #5A5959;
+            }
+
+            /* The second section of the article page */
+
+            .second-section{
+                width:1312px;
+                height:1118px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+            }
+            .second-section img{
+                cursor: pointer;
+                width: 221px;
+                height: 280px;
+            }
+
+
+            .second-section li {
+                border-bottom: 1px solid #D4D4D4;
+            }
+
+            .second-section .first-row, .second-section .second-row, .second-section .third-row{
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 648px);
+                grid-template-rows: 330px;
+                grid-gap:16px;
+                padding-top: 30px;
+                
+                list-style-type: none;
+            }
+
+            .second-section .second-row, .second-section .third-row{
+                padding-top: 49px;
+            }
+
+            .inner-container1, .inner-container2{
+                position:absolute;
+                top:34px;
+                left: 221px;
+                width:372px;
+                height: 225px;
+                padding-left: 13px;  
+                
+                font-family: var(--body-family);
+            }
+
+            .inner-container2{
+                left: 885px;  
+            }
+
+            .inner-container1 h3, .inner-container2 h3{
+                width: 375px;
+                font-size: 28px;
+                line-height: 37px;
+                font-weight: 700;
+                text-decoration: underline;
+                text-underline-offset: 8px;
+
+                padding-bottom: 12px;
+                cursor: pointer;
+            }
+
+            .inner-container1 p:nth-of-type(1), .inner-container2 p:nth-of-type(1){
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: 400;
+                color:#5A5959;
+
+                padding-bottom: 60px;
+            }
+
+            .inner-container1 p:nth-of-type(2), .inner-container2 p:nth-of-type(2){
+                width:372px;
+                height: 96px;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+
+            .second-row .inner-container1, .second-row .inner-container2{
+                top:52px;
+            }
+
+            .third-row .inner-container1, .third-row .inner-container2{
+                top:52px;
+            }
+
+            /* Footer styles */
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="about.html">About</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="events.html">Events</a>
+                    <a href="find a therapist.html">Find a Therapist</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="first-section">
+                <p>Your health and wellbeing should always come first</p>
+                <p>6 Posts</p>
+            </div>
+            <div class="second-section">
+                <ul class="first-row">
+                    <li>
+                        <img src="argue-2.jpeg">
+                        <section class="inner-container1">
+                            <h3>How to Argue Better</h3>
+                            <p>22 October 2022</p>
+                            <p>A few years ago, I had an argument with a close friend who had decided not to give his children any vaccinations. To preserve our relationship, I vowed...</p>
+                        </section>
+                    </li>
+                    <li>
+                        <img src="kind-2.jpeg">
+                        <section class="inner-container2">
+                            <h3>Goodness Takes Reason</h3>
+                            <p>19 October 2022</p>
+                            <p>According to experts, there's a strong link between kindness and intelligence. Being able to stand in someone else's shoes, understand them, and care for them is not a...</p>
+                        </section>
+                    </li>
+                </ul>
+                <ul class="second-row">
+                    <li>
+                        <img src="fawn-2.jpeg">
+                        <section class="inner-container1">
+                            <h3>The Fawn Response</h3>
+                            <p>16 October 2022</p>
+                            <p>Difficulty saying "no," fear of saying what you really feel, and denying your own needs—these are all signs of the fawn response. Have you ever been overly concerned with...</p>
+                        </section>
+                    </li>
+                    <li>
+                        <img src="parent.jpg">
+                        <section class="inner-container2">
+                            <h3>Forgive Your Parents</h3>
+                            <p>13 October 2022</p>
+                            <p>For many, it is a leap to consider that our parents did the best they could with their past, available resources, beliefs, and abilities. Yet to move out of the blame game and see...</p>
+                        </section>
+                    </li>
+                </ul>
+                <ul class="third-row">
+                    <li>
+                        <img src="fear.jpg">
+                        <section class="inner-container1">
+                            <h3>Fear of Missing Out (FOMO)</h3>
+                            <p>9 October 2022</p>
+                            <p>We’re continually being bombarded with suggestions about what we might do (go jet skiing, study in Colorado, visit the Maldives or see the Pyramids). We're always...</p>
+                        </section>
+                    </li>
+                    <li>
+                        <img src="toxic.jpg">
+                        <section class="inner-container2">
+                            <h3>Toxic Positivity</h3>
+                            <p>3 October 2022</p>
+                            <p>While being positive is a good and admirable thing to do, suppressing your emotions and making yourself believe that everything would be alright may not be the ideal way of...</p>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
