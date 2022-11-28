@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+            /* Global Styles */
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'PT Serif', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif', Serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1312px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width: 125px;
+                height: 41px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                display: flex;
+                width: 600px;
+                height: 24px;
+
+                padding-left: 220px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 50px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 62px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 54px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 131px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 63px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                display: flex;
+                width:204px;
+                height:24px;
+
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
+            }
+
+            .left input{
+                width:192px;
+                border: none;
+                outline: none;
+                
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+                margin-top: 6px;
+            }
+
+            .left button{
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+            }
+
+            /* Main styles */
+
+            main{
+                width: 100%;
+            }
+
+            /* The first section of the article page */
+
+            .first-section{
+                width: 1312px;
+                height:207px;
+                margin: auto;
+
+                background-color: #EDF7F7;
+            }
+
+            .first-section p{
+                padding-top: 78px;
+                font-family: var(--body-family);
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 50px;
+                text-align: center;
+
+                color: var(--body-fg);
+                font-style: italic;
+            }
+
+            /* The second section of the article page */
+
+            .second-section{
+                display:flex;
+                position: relative;
+                width: 1312px;
+                height: 109px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+              
+            }
+
+            .second-section p{
+                padding-top: 41px;
+                padding-right:11px;
+
+                font-family: var(--body-family);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21px;
+
+                color: var(--body-fg);
+            }
+          
+            .second-section .border{
+                width: 1176.02px;
+                position: absolute;
+                border-bottom:1px solid #D4D4D4;
+                margin-top: 54.49px;
+                margin-left: 136px;
+            }             
+
+            /* The third section of the article page */
+
+            .third-section{
+                width: 1312px;
+                height: 1480px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+            }
+
+             .third-section li{
+                display: grid;
+                grid-template-columns: max-content max-content;
+             }
+
+             .third-section li+li{
+                padding-top: 54px;
+
+             }
+
+            .inner-container1 p:nth-child(1), .inner-container1 p:nth-child(3), .inner-container1 a{
+                font-family: var(--body-family);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21px;
+
+                margin-bottom: 15px;
+
+                color: #5A5959;
+            }
+
+            .inner-container1 p:nth-child(2){
+                font-family: var(--body-family);
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 26px;
+
+                color:var(--body-family);
+                margin-bottom: 15px;
+            }
+
+            .inner-container1 a{
+                position:absolute;
+                color:var(--body-family);
+                padding-top: 15px;
+                padding-left: 28px;
+                padding-right: 34px;
+                padding-bottom: 14px;
+
+                border: 1px solid #5A5959;
+                cursor: pointer;
+            }
+
+            .inner-container1 a:hover{
+                color: var(--body-bg);
+                background-color: #5A5959;
+            }
+
+            .inner-container1 img{
+                margin-left: 13px;
+                width: 13px;
+                height:13px;
+            }
+
+            .inner-container1 a:hover img{
+                filter: invert(1);
+            }
+                
+            .inner-container1 {
+                width: 642px;
+                height: 167px;
+                padding-left: 49px;
+            }
+
+            .row1 .inner-container1, .row3 .inner-container1{
+                padding-top: 47px;
+            }
+
+            .row2 .inner-container1{
+                padding-top: 9px;
+            }
+
+            .row4 .inner-container1{
+                padding-top: 43px;
+            }
+
+            .row5 .inner-container1{
+                padding-top: 45px;
+            }
+
+            /* Footer styles */
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="about.html">About</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="events.html">Events</a>
+                    <a href="find a therapist.html">Find a Therapist</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="first-section">
+                <p>Keep up to date with the latest events on mental health and wellbeing</p>
+            </div>
+            <div class="second-section">
+                <p>NOVEMBER 2022</p>
+                <div class="border"></div>
+            </div>
+            <div class="third-section">
+                <ul style="list-style-type: none;">
+                    <li class="row1">
+                        <img src="event1.jpeg" width="258" height="258">
+                        <section class="inner-container1">
+                            <p>Wed, Nov 30, 7:00 PM</p>
+                            <p>Overcome From The Impacts Of Childhood Trauma In 3 Months</p>
+                            <p>Online</p>
+                            <a>More Info<img src="ex-link.svg"></a>               
+                        </section>
+                    </li>
+                    <li class="row2">
+                        <img src="event2.jpeg" width="258" height="189px">
+                        <section class="inner-container1">
+                            <p>Sun, Nov 20, 7:00 PM</p>
+                            <p>Navigating Mental Health: A Parent Seminar</p>
+                            <p>Sanctus Church Ajax</p>
+                            <a>More Info<img src="ex-link.svg"></a>                       
+                        </section>
+                    </li>
+                    <li class="row3">
+                        <img src="event3.jpeg" width="258" height="266">
+                        <section class="inner-container1">
+                            <p>Wed, Nov 16, 8:00 PM</p>
+                            <p>Treat People With Kindness: A Harry Styles Inspired Dance Party</p>
+                            <p>Phoenix Concert Theatre</p>
+                            <a>More Info<img src="ex-link.svg"></a>                       
+                        </section>
+                    </li>
+                    <li class="row4">
+                        <img src="event4.jpeg" width="258" height="268">
+                        <section class="inner-container1">
+                            <p>Wed, Nov 9, 2:00 PM</p>
+                            <p>Healing anxiety/depression via your unique energetic blueprint</p>
+                            <p>Online</p>
+                            <a>More Info<img src="ex-link.svg"></a>                       
+                        </section>                        
+                    </li>
+                    <li class="row5">
+                        <img src="event5.jpg" width="258" height="258.22">
+                        <section class="inner-container1">
+                            <p>Sun, Nov 6, 2:30 PM </p>
+                            <p>Free public yoga classes</p>
+                            <p>Garden at Kimbourne</p>
+                            <a>More Info<img src="ex-link.svg"></a>                       
+                        </section>
+                    </li>
+                </ul>
+            </div>             
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
