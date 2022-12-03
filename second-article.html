@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+            /* Global Styles */
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'PT Serif', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif',Serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1312px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width: 125px;
+                height: 41px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                display: flex;
+                width: 600px;
+                height: 24px;
+
+                padding-left: 220px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 50px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 62px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 54px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 131px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 63px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                display: flex;
+                width:204px;
+                height:24px;
+
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
+            }
+
+            .left input{
+                width:192px;
+                border: none;
+                outline: none;
+                
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+                margin-top: 6px;
+            }
+
+            .left button{
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+                outline: none;
+            }
+            
+            /* Main styles */
+
+            main{
+                width: 100%;
+            }
+
+            /* The first section of the article page */
+
+            .first-section{
+                width: 1312px;
+                height:207px;
+                margin: auto;
+
+                background-color: #F5F5F3;
+                font-family: var(--body-family);
+                color: var(--body-fg);
+            }
+
+            .first-section h2{
+                padding-top: 25px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(1){
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(2){
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 40px;
+                text-align: center;
+                color: #5A5959;
+            }
+
+            /* The second section of the article page */
+
+            .second-section{
+                width:1312px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+                font-family: var(--body-family);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 34px;  
+            }
+
+            .second-section p{
+                margin-left: 111px;
+                margin-right: 111px;
+                margin-top: 17px;
+            }
+          
+            /* The third section of the article page */
+
+            .third-section{
+                position: relative;
+                width:1312px;
+                height: 74px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+            }
+
+            .third-section p{
+                position: absolute;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 34px;
+
+                top: 20px;
+                left: 111px;
+            }
+
+            .third-section p a{
+                font-style: italic;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-thickness: 1px;
+                cursor: pointer;
+            }
+
+            .third-section p+a{
+                float: right;
+                color:#5A5959;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-top: 28px;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                cursor: pointer;
+            }
+
+            /* The fourth section of the article page */
+
+            .fourth-section{
+                display: flex;
+                width:1312px;
+                height:207px;
+                margin: auto;
+
+                background-color:#F5F5F3;
+                color: var(--body-fg);
+            }
+
+            .fourth-section img{
+                padding-left: 111px;
+            }
+
+            .fourth-section p{
+                padding-top: 44px;
+
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 60px;
+                font-style: italic;
+                text-align: center;
+                color: var(--body-family);
+            }
+
+            /* Footer styles */
+
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="section-1">
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="about.html">About</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="events.html">Events</a>
+                    <a href="find a therapist.html">Find a Therapist</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="first-section">
+                <h2>Goodness Takes Reason</h2>
+                <p>Are Kind People Intelligent?</p>
+                <p>19 October 2022</p>
+            </section>
+            <div class="second-section">
+                <p>According to experts, there’s a strong link between kindness and intelligence. Being able to stand in someone else’s shoes, understand them, and care for them is not a weakness, but perhaps the strongest trait of all, which also keeps your brain healthy.
+                    <br>In accordance with the study done by the famous neuroscientist Richard Davidson, kindness makes brains healthy. Teaching kids and adolescents to be kind can increase their academic performance and emotional well-being.
+                    <br>Just having a high IQ doesn’t mean you’re a genius. Understanding others and having empathy is actually more important. It has been noted that emotional intelligence is more powerful than general intelligence. Kind people understand emotions well and, as a result, are able to connect with others and themselves easily.
+                </p>
+
+                <p>If you think "good" means "naive," you're wrong! Experts say that kindness is one of the main features of intelligence. In other words, good people are the smartest.
+                    <br>First off, being kind means that you have the ability to think of other people’s problems above your own. You are not selfish in any way. To be smart means that you gain knowledge and therefore apply it later in life. You aren’t just learning facts, you are also using them in life, similar to kindness.
+                </p>
+                <p>Neurobiologist Richard Davidson says: "The foundation of a healthy brain is kindness." He explains that kindness requires the ability to think not only about ourselves but also about others. Ultimately, intelligence is defined as "the ability to acquire and apply knowledge and skills." To be sensible means not just memorising random facts, but finding use of your knowledge in everyday life.
+                </p>
+                <p>Most people who are racists have trouble accepting change. Admitting that you are wrong and changing your personal perspective takes a lot of thought. There is a complete process your brain goes through to change your view, which is very hard to do, even for smart people.
+                    <br>The fact that the tendency to racism and prejudice is often dictated by an inability to adapt to change is another sign of low intelligence. Stephen Hawking is often credited with saying, "Intellect is the ability to adapt to change." In fact, this quote has been known since at least 1905, but not that; the main thing is that this is true, and this is quite logical. The ability to accept change requires mental effort.
+                </p>
+                <p>It costs nothing to be nice, but small acts of kindness go a long way! Even though someone might help others without wanting to receive anything back, it benefits both people involved. According to a study, the "warm glow of kindness" is real and it activates the reward network of our brains, making us feel extremely happy and satisfied.
+                    <br>It is probably easier to turn a blind eye to everything and only care about yourself. It takes courage and a huge heart to take the time to help others. Being kind is not being weak; it is what our world desperately needs today. Call your grandparents, ask an old friend how he’s doing, make a stranger smile. Treat others how you’d like to be treated!
+                </p>
+                <p>While yes, you can have a high IQ, you still may not be the smartest. It takes being socially aware of your surroundings and being emotionally intelligent as well. Kind people are the smatest as they have developed empathy along with critical thinking.
+                </p>
+                <p>So, try to be kinder. It will only help you to develop and keep your brain healthy. It will only help you to be more successful in life.
+                </p>
+            </div>
+            <div class="third-section">
+                <p>Reference: <a>https://brightside.me/wonder-curiosities/why-kind-people-are-often-the-smartest-of-all-797560/</a></p>
+                <a href="#section-1">Back To Top</a>
+            </div>
+            <div class="fourth-section">
+                <img src="article2.jpeg" width="275" height="207">
+                <p>“In a world where so many are throwing bricks on others, be the one who builds bridges with them.
+                    <br>Be the one who makes others feel included.”
+                </p>
+            </div>
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
