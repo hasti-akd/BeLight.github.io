@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BeLight Magazine</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+            /* Global Styles */
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            :root{
+                --header-bg-color:#fff;
+                --header-fg-color: #202124;
+                --header-family: 'Alice', serif;
+                --header-nav-family:'PT Serif', serif;
+
+                --body-bg: #fff;
+                --body-fg: #202124;
+                --body-family: 'PT Serif',Serif;
+            }
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+                background-color: var(--header-bg-color);
+            }
+
+            nav{
+                width: 1312px;
+                height: 80px;
+
+                margin: auto;
+                display: flex;
+            }
+
+            .right{
+
+                width: 125px;
+                height: 41px;
+                padding-top: 20px;
+
+                color: var(--header-fg-color);
+
+                font-size: 36px;
+                line-height: 41px;
+                font-family: var(--header-family);
+                font-weight: 400;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .middle{
+                display: flex;
+                width: 600px;
+                height: 24px;
+
+                padding-left: 220px;
+                padding-top: 27px;
+            }
+
+            .middle >a{
+                color:var(--header-fg-color);
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .middle a::after {
+                content:'';
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                top: 53px;
+                width: 0;
+                height: 1px;
+                transition: width 200ms ease;
+                background-color: var(--body-fg);
+            }
+
+            .middle a:hover::after {
+                width: 50px;
+            }
+
+            .middle a:nth-of-type(2):hover::after {
+                width: 62px;
+            }
+
+            .middle a:nth-of-type(3):hover::after {
+                width: 54px;
+            }
+
+            .middle a:nth-of-type(4):hover::after {
+                width: 131px;
+            }
+
+            .middle a:nth-of-type(5):hover::after {
+                width: 63px;
+            }
+
+            .middle a+a{
+                margin-left: 60px;
+            }
+
+            .left{
+                display: flex;
+                width:204px;
+                height:24px;
+
+                margin-top: 29px;
+                margin-left: 163px;
+                border-bottom: 2px solid #D4D4D4;
+            }
+
+            .left input{
+                width:192px;
+                border: none;
+                outline: none;
+                
+
+                font-family: var(--header-nav-family);
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .left img{
+                width: 12px;
+                height: 12px;
+                margin-top: 6px;
+            }
+
+            .left button{
+                color: #fff;
+                background-color: #fff;
+                border:none;
+                cursor: pointer;
+                outline: none;
+            }
+            
+            /* Main styles */
+
+            main{
+                width: 100%;
+            }
+
+            /* The first section of the article page */
+
+            .first-section{
+                width: 1312px;
+                height:207px;
+                margin: auto;
+
+                background-color: #F5F5F3;
+                font-family: var(--body-family);
+                color: var(--body-fg);
+            }
+
+            .first-section h2{
+                padding-top: 25px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(1){
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            .first-section p:nth-of-type(2){
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 40px;
+                text-align: center;
+                color: #5A5959;
+            }
+
+            /* The second section of the article page */
+
+            .second-section{
+                width:1312px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+                font-family: var(--body-family);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 34px;  
+            }
+
+            .second-section p{
+                margin-left: 111px;
+                margin-right: 111px;
+                margin-top: 17px;
+            }
+          
+            /* The third section of the article page */
+
+            .third-section{
+                position: relative;
+                width:1312px;
+                height: 74px;
+                margin: auto;
+
+                background-color:var( --body-bg);
+                color: var(--body-fg);
+            }
+
+            .third-section p{
+                position: absolute;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 34px;
+
+                top: 20px;
+                left: 111px;
+            }
+
+            .third-section p a{
+                font-style: italic;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-thickness: 1px;
+                cursor: pointer;
+            }
+
+            .third-section p+a{
+                float: right;
+                color:#5A5959;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-top: 28px;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                cursor: pointer;
+            }
+
+            /* The fourth section of the article page */
+
+            .fourth-section{
+                display: flex;
+                width:1312px;
+                height:207px;
+                margin: auto;
+
+                background-color:#F5F5F3;
+                color: var(--body-fg);
+            }
+
+            .fourth-section img{
+                padding-left: 111px;
+                padding-top: 17px;
+            }
+
+            .fourth-section p{
+                padding-left: 2px;
+                padding-top: 74px;
+
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 60px;
+                font-style: italic;
+                color: var(--body-family);
+            }
+
+            /* Footer styles */
+
+            footer{
+                margin:auto;
+                display: flex;
+
+                width: 1440px;
+			    height: 80px;
+            }
+            
+            .footer-section p{
+                width: 301px;
+                height: 18px;
+
+                padding-top: 31px;
+                padding-left: 64px;
+
+                font-size: 16px;
+                line-height: 18px;
+                font-family:var(--header-family);
+                font-weight: 400;
+            }
+
+            .inner-container-footer {
+                padding-left: 915px;;
+                padding-right: 64px;
+                padding-top: 28px;
+            }
+
+            .inner-container-footer img:nth-child(1){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            .inner-container-footer img:nth-child(2){
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer img:nth-child(3){
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+            }
+
+            .inner-container-footer :not(:first-child){
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="section-1">
+            <nav>
+                <a class="right" href="index.html">BeLight</a>
+                <div class="middle">
+                    <a href="about.html">About</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="events.html">Events</a>
+                    <a href="find a therapist.html">Find a Therapist</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="left">
+                    <input type="search" placeholder="Search">
+                    <button type="sumbit"><img src="search.svg"></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="first-section">
+                <h2>The Fawn Response</h2>
+                <p>How Trauma Can Lead to People-Pleasing</p>
+                <p>16 October 2022</p>
+            </section>
+            <div class="second-section">
+                <p>Difficulty saying "no," fear of saying what you really feel, and denying your own needs—these are all signs of the fawn response.
+                    <br>Have you ever been overly concerned with the needs and emotions of others instead of your own? This may be a trauma response known as fawning. You’ve probably heard of other trauma responses such as fight, flight, and freeze. These can occur when faced with a situation that feels emotionally or physically dangerous.
+                </p>
+                <p>The fawn response to trauma is less well known but may be common too. The fawn response is a response to a threat by becoming more appealing to the threat. Fawning refers to consistently abandoning your own needs to serve others to avoid conflict, criticism, or disapproval. Fawning is also called the "please and appease" response and is associated with people-pleasing and codependency.
+                    <br>Fawn types seek safety by merging with the wishes, needs, and demands of others. They act as if they unconsciously believe that the price of admission to any relationship is the forfeiture of all their needs, rights, preferences, and boundaries.
+                </p>
+                <p style="font-size: 20px; font-weight: 700;">Why do people go into the fawn response?</p>
+                <p>Trauma is often at the root of the fawn response.
+                    <br>Research from 1999 found that codependency may develop when a child grows up in a shame-based environment and when they had to take on some parental roles, known as parentfication.
+                    <br>Examples of fawning might look like:
+                </p>
+                <p style="padding-left: 40px;">• Pursuing a certain career primarily to please your parents
+                    <br>• Not speaking up about your restaurant preferences when choosing where to go for dinner
+                    <br>• Missing work so that you can look after your partner’s needs
+                    <br>• Giving compliments to an abuser to appease them, though this is at your own expense
+                    <br>
+                </p>
+                <p>The fawn response is not to be confused with demonstrating selflessness, kindness, or compassion. Fawning-like behaviour is complex, and while it is linked with trauma, it can also be influenced by several factors, including gender, sexuality, culture, and race.</p>
+                <p style="font-size: 20px; font-weight: 700;">What are signs of the fawn response?</p>
+                <p>Some signs of fawning include:</p>
+                <p style="padding-left: 40px;">• Stifling your own needs
+                    <br>• Having trouble saying "no"
+                    <br>• Over-apologizing
+                    <br>• Holding back opinions or preferences that might seem controversial
+                    <br>• Experiencing chronic pain or illness
+                    <br>• Trouble with personal boundaries
+                    <br>• Fixing or rescuing people from their problems
+                    <br>• Attempting to control others' choices to maintain a sense of emotional safety
+                </p>
+                <p style="font-size: 20px; font-weight: 700;">How to recover from the fawn response</p>
+                <p style="font-size: 18px; font-weight: 700;">1. Become aware of your actions</p>
+                <p>Noticing your patterns of fawning is a valuable step toward overcoming them. When you suspect you’re fawning, try asking yourself:</p>
+                <p style="padding-left: 40px;">• Am I saying/doing this to please someone else? And is it at my own expense?
+                    <br>• Do my actions right now align with my personal values?
+                    <br>• Am I being authentic, or am I taking actions for someone else’s benefit?
+                </p>
+                <p style="font-size: 18px; font-weight: 700;">2. Validate your experiences and feelings</p>
+                <p>People experiencing the fawn response to trauma may have grown up having their feelings invalidated by their caregivers. To help reverse this experience and reprogram your thoughts, it can help to know how to validate your thoughts and experiences.
+                    <br>Here are some examples of validating yourself:</p>
+                <p style="padding-left: 40px;">• "I’m going to be patient with myself as I grow and heal."
+                    <br>• "What happened to me was really hard. I acknowledge the challenges I face."
+                </p>
+                <p style="font-size: 18px; font-weight: 700;">3. Build healthy relationships</p>
+                <p>When you’re in fawn mode, your relationships might be one-sided. If you’ve been catering to others’ needs, your own needs might not be met.</p>
+                <p style="font-size: 18px; font-weight: 700;">4. Value yourself</p>
+                <p>People who engage in pleasing behaviours may have built an identity around being likable. It can therefore be freeing to build self-worth outside of others’ approval. Some ways to do that might include:</p>
+                <p style="padding-left: 40px;">• Going after your personal goals and dreams
+                    <br>• Engaging in hobbies that make you happy, even if they aren’t your friends’ or partners’ favourite things
+                </p>
+            </div>
+            <div class="third-section">
+                <p>Reference: <a>https://psychcentral.com/health/fawn-response</a></p>
+                <a href="#section-1">Back To Top</a>
+            </div>
+            <div class="fourth-section">
+                <img src="article3.jpeg" width="244" height="174.26">
+                <p>“Never allow someone to be your priority while allowing yourself to be their option.”</p>
+            </div>
+        </main>
+        <footer class="footer-section">
+                <p>BeLight-Canada's Best Health Magazine</p>
+                <div class="inner-container-footer">
+                    <img src="facebook.svg">
+                    <img src="twitter.svg">
+                    <img src="instagram.svg">
+                </div>
+        </footer>
+    </body>
+</html>
